@@ -1,0 +1,75 @@
+GIT important commands:
+
+git remote add origin URL
+git pull url
+git checkout -b feature/nameOfTheBranch
+git branch
+
+git add .
+git commit -m "commit message"
+git remote add origin https://github.com/wangx6/ui_demo.git
+git push
+git push --set-upstream origin feature/lqe-002-centre-panel
+git remote -v
+
+git push
+git push --set-upstream origin feature/lqe-002-centre-panel
+git remote -v
+
+------------------------------------------------------------------------------------
+Important React stuff:
+Model - state-power-api
+Component - state - constroller space[calls model via api] - view
+useState [useState and view - not in same components, causes tetsing issue] instead use custom Hooks
+useContext
+... thread parameter
+useEffect
+async, await, promise()
+router
+testing jest, enzyme
+common components button - project 2
+css styling
+css conventions - [has__ noun] [is -- adjective]
+SASS
+sass - install sass, import index.scss inside app.js so accessible to all components. 
+sass conventions - index.scss and other component files _component.scss
+
+Forms
+ErrorModel-ErrorContext
+
+extension: prettier formatter,  simple react snippets, intellisense - css helper, code spell checker
+
+
+ref:
+project 1:
+https://github.com/wangx6/todo-list
+https://github.com/wangx6/capi_node_todo
+
+project 2
+https://github.com/wangx6/ui_demo
+https://github.com/wangx6/ui_demo_capi
+
+------------------------------------------------------------------------------------
+important javascript lessons
+
+https://github.com/jonasschmedtmann/complete-javascript-course/blob/master/10-Functions/
+async, await, promise()
+
+very important for map, array, iterators in JS:
+loadash.com
+underscorre.js
+
+------------------------------------------------------------------------------------
+Swagger API doc setup:
+
+https://developer.amazon.com/docs/amazon-drive/ad-restful-api-response-codes.html
+
+https://editor.swagger.io/
+
+https://swagger.io/docs/specification/2-0/basic-structure/ 
+
+https://blog.logrocket.com/documenting-your-express-api-with-swagger/
+
+------------------------------------------------------------------------------------
+
+
