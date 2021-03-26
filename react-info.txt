@@ -27,7 +27,7 @@ useEffect
 async, await, promise()
 router
 testing jest, enzyme
-common components button - project 2
+common components button - project 2 and https://buttercms.com/blog/building-reusable-components-using-react 
 css styling
 css conventions - [has__ noun] [is -- adjective]
 SASS
@@ -65,6 +65,12 @@ otherRef:
 https://github.com/ashishbharvirkar/counter-app
 https://github.com/ashishbharvirkar/CHAT_APPLICATION
 
+https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A
+https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw
+https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA
+
+https://buttercms.com/blog/building-reusable-components-using-react
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT
 ------------------------------------------------------------------------------------
 important javascript lessons
 
@@ -74,6 +80,7 @@ async, await, promise()
 very important for map, array, iterators in JS:
 loadash.com
 underscorre.js
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT
 
 ------------------------------------------------------------------------------------
 Swagger API doc setup:
