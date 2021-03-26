@@ -1,0 +1,35 @@
+/*
+Object used to hold the result of an a sync operation
+or
+Container for future value
+
+new Promise((resolve, reject) => {
+console.log('done');
+});
+*/
+
+/*
+var p = Promise.resolve([2,3]);
+p.then(function(v) {
+console.log(v[0]); // 1
+});
+*/
+const promise1 = new Promise(function(resolve, reject) {
+resolve('success!');
+});
+
+promise1.then((result) => {
+console.log(result);
+}).catch((err) => {
+
+});
+const promise1 = new Promise(function(resolve, reject) {
+reject(‘fail!’);
+});
+promise1.then((result) => {
+//console.log(result);
+}).catch((err) => {
+console.log(err);
+});
+then will resolve
+reject with go catch
