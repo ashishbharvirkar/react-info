@@ -34,10 +34,22 @@ SASS
 sass - install sass, import index.scss inside app.js so accessible to all components. 
 sass conventions - index.scss and other component files _component.scss
 
+project conventions: 
+2 spaces[tab editor and edit in settings]
+folders uppercase
+file with two or more words use hyfon-
+function no uppercase
+constoller space - start with onXyz 
+
+Initiazlise - onInit
+onInit is useEffect with empty array [] and for particular props or function [props]
+
 Forms
 ErrorModel-ErrorContext
 
 extension: prettier formatter,  simple react snippets, intellisense - css helper, code spell checker
+
+Node and other tools: ESLint for JS, react icons, axios for calling capi, testing library jest-do/user-event, react-dom
 
 
 ref:
@@ -48,6 +60,10 @@ https://github.com/wangx6/capi_node_todo
 project 2
 https://github.com/wangx6/ui_demo
 https://github.com/wangx6/ui_demo_capi
+
+otherRef: 
+https://github.com/ashishbharvirkar/counter-app
+https://github.com/ashishbharvirkar/CHAT_APPLICATION
 
 ------------------------------------------------------------------------------------
 important javascript lessons
@@ -72,4 +88,47 @@ https://blog.logrocket.com/documenting-your-express-api-with-swagger/
 
 ------------------------------------------------------------------------------------
 
+PIPELINE:
+add dockerfile and jesnkins file in your project which links to openshift. [serve: script to 8080]
+Change appVersion in pipelin.config given by dev_ops taem
+project name - by developers
+
+Look for training videos from XIN. local drive
+
+Openshift - Stephen curtis and Dara for creating a dev/test environemnt
+
+------------------------------------------------------------------------------------
+
+JS testing
+
+Needed in all test cases[Initialise as below for all tests]
+ref: ToDOModel.test.js
+
+import Enzyme, { mount } from 'Enzyme';
+import Adapter17 from '@wojtekmaj/enzyme-adapter-react-17';
+import { act } from 'react-dom/test-utils';
+import axios from 'axios';
+
+jest.mock('axios');
+
+Enzyme.configure({adapter: new Adapter17()});
+
+let tdm;
+function wrapper(hook) {
+    const HookWrapper = () => {
+        tdm = hook();
+        return null;
+    }
+    mount(<HookWrapper />);
+    return tdm ;
+}
+
+describe('unit test for todo model', () => {
+    it('should initalize', () => {
+        let tdm = wrapper(ToDoModel);
+        expect(tdm.todos).toEqual([]);
+        expect(tdm.active).toEqual([]);
+        expect(tdm.completed).toEqual([]);
+        expect(tdm.pending).toEqual([]);
+    });
 
