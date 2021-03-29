@@ -139,3 +139,36 @@ describe('unit test for todo model', () => {
         expect(tdm.pending).toEqual([]);
     });
 
+
+  // Model Test Template
+
+    import <MODEL_UNDER_TEST> from './<MODEL_UNDER_TEST>';
+    import Enzyme, { mount } from 'Enzyme';
+    import Adapter17 from '@wojtekmaj/enzyme-adapter-react-17';
+    import { act } from 'react-dom/test-utils';
+    import axios from 'axios';
+
+    jest.mock('axios');
+
+    Enzyme.configure({adapter: new Adapter17()});
+
+    let tdm;
+
+    function wrapper(hook) {
+    const FakeComponent = () => {
+    tdm = hook();
+    return <div>fake element</div>;
+    }
+    mount(<FakeComponent>
+    <div></div>
+    </FakeComponent>);
+    return tdm ;
+    }
+
+    describe('unit test for todo model', () => {
+
+    // Mount fake component 
+    let tdm = wrapper(<MODEL_UNDER_TEST>);
+
+    // add units here
+    });
