@@ -172,3 +172,8 @@ describe('unit test for todo model', () => {
 
     // add units here
     });
+------------------------------------------------------------------
+
+IE issue:
+
+react-app-polyfill/ie9
